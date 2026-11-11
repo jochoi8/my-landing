@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="부산외국어대학교 글로벌자율전공 [이름]을 소개합니다.">
+  <title>[이름] | 나를 소개합니다</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20332d;
+      --muted: #68766f;
+      --green: #2f7258;
+      --green-dark: #245843;
+      --paper: #f7f6f1;
+      --card: #fffefa;
+      --line: #e8e8df;
+      --serif: Georgia, "Noto Serif KR", serif;
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 92% 8%, rgba(216, 226, 205, 0.48), transparent 28rem),
+        var(--paper);
+    }
+
+    .page {
+      width: min(100% - 40px, 760px);
+      margin-inline: auto;
+      padding-block: 34px 48px;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+    }
+
+    .topline-mark {
+      display: grid;
+      width: 28px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid #d2dfd3;
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 0.82rem;
+    }
+
+    .hero {
+      padding-block: 68px 48px;
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 11vw, 4.7rem);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1.12;
+    }
+
+    .intro {
+      max-width: 540px;
+      margin: 22px 0 0;
+      color: #52635b;
+      font-size: 1rem;
+      line-height: 1.85;
+      word-break: keep-all;
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 23px 0 0;
+      padding: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      list-style: none;
+    }
+
+    .profile li {
+      display: flex;
+      gap: 6px;
+    }
+
+    .profile strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .interests {
+      padding-top: 37px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .section-note {
+      margin: 8px 0 20px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .interest-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .interest-card {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      align-items: center;
+      gap: 14px;
+      min-height: 94px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255, 254, 250, 0.82);
+    }
+
+    .interest-icon {
+      display: grid;
+      width: 48px;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 13px;
+      background: #edf2e8;
+      font-size: 1.38rem;
+    }
+
+    .interest-card h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .interest-card p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 39px;
+      padding: 24px 21px;
+      border-radius: 17px;
+      background: #e9eee5;
+    }
+
+    .contact h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .contact p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--green);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .contact-button:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    .contact-button:focus-visible {
+      outline: 3px solid #7da88d;
+      outline-offset: 3px;
+    }
+
+    footer {
+      padding-top: 23px;
+      color: #89928c;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    @media (min-width: 620px) {
+      .page {
+        padding-block: 42px 55px;
+      }
+
+      .hero {
+        padding-block: 91px 62px;
+      }
+
+      .interest-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+      }
+
+      .interest-card {
+        grid-template-columns: 1fr;
+        align-content: start;
+        gap: 15px;
+        min-height: 172px;
+        padding: 19px;
+      }
+
+      .interest-card p {
+        max-width: 18em;
+      }
+
+      .contact {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topline" aria-label="학교와 전공">
+      <span class="topline-mark" aria-hidden="true">B</span>
+      <span>부산외국어대학교 · 글로벌자율전공</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">안녕하세요, 반가워요</p>
+      <h1 id="page-title">나를<br>소개합니다<span aria-hidden="true">.</span></h1>
+      <p class="intro">여행으로 세상을 만나고, 책으로 생각을 넓히며, 테니스로 활력을 채우는 글로벌자율전공 [이름]입니다.</p>
+      <ul class="profile" aria-label="내 정보">
+        <li><strong>이름</strong> [이름]</li>
+        <li><strong>학번</strong> [학번]</li>
+        <li><strong>전화번호</strong> [전화번호]</li>
+      </ul>
+    </section>
+
+    <section class="interests" aria-labelledby="interests-title">
+      <h2 class="section-heading" id="interests-title">요즘 좋아하는 것</h2>
+      <p class="section-note">작은 즐거움이 모여 나다운 하루를 만들어요.</p>
+      <div class="interest-list">
+        <article class="interest-card">
+          <span class="interest-icon" aria-hidden="true">✈️</span>
+          <div>
+            <h3>여행하기</h3>
+            <p>새로운 풍경과 문화를 만나는 설렘을 좋아해요.</p>
+          </div>
+        </article>
+        <article class="interest-card">
+          <span class="interest-icon" aria-hidden="true">📚</span>
+          <div>
+            <h3>독서하기</h3>
+            <p>책 속의 이야기를 따라 생각의 폭을 넓혀요.</p>
+          </div>
+        </article>
+        <article class="interest-card">
+          <span class="interest-icon" aria-hidden="true">🎾</span>
+          <div>
+            <h3>테니스 운동</h3>
+            <p>코트 위에서 몸도 마음도 가볍게 움직여요.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">편하게 연락해 주세요</h2>
+        <p>이메일로 이야기 나눠요.</p>
+      </div>
+      <a class="contact-button" href="mailto:myemail@naver.com">이메일 보내기</a>
+    </section>
+
+    <footer>부산외국어대학교 글로벌자율전공 · [이름]</footer>
+  </main>
+</body>
+</html>
